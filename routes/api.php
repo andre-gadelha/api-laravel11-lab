@@ -22,4 +22,5 @@ Route::get('/atividade/{id}', [AtividadeController::class, 'show']);
 Route::post('/atividade', [AtividadeController::class, 'store']);
 Route::put('/atividade/{id}', [AtividadeController::class, 'update']);
 Route::delete('/atividade/{id}', [AtividadeController::class, 'destroy']);
+Route::patch('/atividade/{id}', [AtividadeController::class, 'patch']);
 

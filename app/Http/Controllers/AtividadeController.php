@@ -45,4 +45,14 @@ class AtividadeController extends Controller
         return response()->noContent();
     }
 
+    public function patch($id, Request $request)
+    {
+        // Lógica para atualizar parcialmente uma atividade
+        $atividade = Atividade::findOrFail($id);
+        
+        $atividade->update($request->only(['titulo']));
+
+        return response()->json(['message' => 'Atividade atualizada com sucesso']);
+    }
+
 }
